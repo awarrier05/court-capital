@@ -1,5 +1,7 @@
 # Court Capital
 
+[Live analytical app](https://court-capital.netlify.app/) · [Research brief and pitch](https://court-capital.netlify.app/Research_Brief.pdf)
+
 A research prototype for valuing and simulating equity in fictional athlete commercial ventures. The principal case is a five-year company that sells licensed sponsorship, merchandise, content and event products. Investor distributions come from venture earnings and remaining cash at liquidation. There is **no NBA salary assignment, ownership of an athlete, or automatic payment from game statistics**.
 
 This repository contains a working analytical prototype and a conditional business model. It is not a launched investment platform, an approved securities offering, or evidence that athlete participation and customer demand have been obtained. The six tickers are fictional archetypes.
@@ -13,7 +15,7 @@ This repository contains a working analytical prototype and a conditional busine
 - `data/commercial_model.json`: 20,000-scenario results, assumptions, sensitivities and platform economics.
 - `data/commercial_scenarios_sample.csv`: the first 1,000 draws, with per-unit PV and annual distributions. It is a compact inspection sample, not the complete dataset used for reported results.
 - `model.py`, `model.test.py`, `data/model.json`: original hypothetical salary-receivable comparison. This is an analytical appendix, not the recommended commercial structure.
-- `data/sources.json` and `report/sources.json`: evidence registers. The latter supplies additional business-structure and regulatory research.
+- `data/sources.json`: primary-source evidence register. The reproducibility ZIP also contains report source text and report builders under `report/`.
 - `PROJECT_PROFILE.txt`: factual project description and suggested resume wording.
 
 ## Reproduce the financial analysis
