@@ -1,0 +1,1 @@
+Model outputs and evidence registers. The sample contains the first 1,000 draws; reported statistics use all 20,000 paired scenarios. Run commercial_model.py to regenerate the full commercial dataset.
