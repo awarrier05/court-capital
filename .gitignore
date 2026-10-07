@@ -1,0 +1,7 @@
+__pycache__/
+.venv/
+.DS_Store
+node_modules/
+data/*draws.csv.gz
+report/*page*.png
+report/*contact*.jpg

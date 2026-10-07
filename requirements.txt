@@ -1,0 +1,2 @@
+# Financial generators and invariant tests; Python 3.11+ recommended.
+numpy==2.3.5

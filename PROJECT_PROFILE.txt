@@ -1,0 +1,20 @@
+TITLE
+Court Capital | Athlete Commercial Equity & Market Simulation
+
+PROJECT DESCRIPTION
+Developed a working research prototype that connects sports economics, venture valuation and market simulation. The central model values equity in six fictional athlete commercial businesses whose revenue comes from licensed sponsorship, merchandise, content and events. A reproducible 20,000-scenario model links commercial demand and athlete attention to operating cash flow, taxes, dividends, reserves, insolvency and final liquidation. The project includes a paper-market simulator, portfolio downside analysis, platform break-even cases, primary-source research and accounting tests. An original salary-receivable analysis remains as a comparison explaining why salary exposure and commercial-company equity require different structures. All player ventures and financial forecasts are hypothetical; no offering, athlete agreement, customer traction or investment returns are claimed.
+
+RESUME BULLET
+Built a sports-finance research platform combining 20,000 Monte Carlo scenarios, quarterly venture cash-flow valuation and portfolio stress testing across six fictional athlete businesses; modeled capital allocation, distributions, insolvency and platform break-even economics.
+
+SECOND BULLET IF SPACE PERMITS
+Implemented 25 financial-model invariant checks and a paper-market simulation, while separating source-backed contract rules from hypothetical commercial assumptions and securities-law questions.
+
+INTERVIEW SUMMARY
+The starting question was whether fans could invest in a player's economic upside. I separated performance-linked speculation from cash flows an actual company could earn. The resulting prototype evaluates hypothetical equity in a licensed commercial venture, with sports performance affecting sales assumptions rather than creating a claim on salary. The key output is not a promised return: it is a transparent model showing which revenues, rights, margins and investor protections would need to be substantiated before the concept could become a business.
+
+SKILLS DEMONSTRATED
+Financial Modeling; Monte Carlo Simulation; Discounted Cash Flow; Python; JavaScript; Portfolio Risk Analysis; Cash Flow Forecasting; Scenario Analysis; Capital Allocation; Sports Business Research; Unit Economics.
+
+ACCURACY NOTE
+Use these descriptions only with the delivered model and application. Do not describe the project as an operating exchange, a regulated product, a trained AI system, a completed investment offering or a real athlete partnership.
