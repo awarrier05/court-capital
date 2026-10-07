@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "title": "NBA/NBPA. 2023 Collective Bargaining Agreement",
+    "description": "June 28, 2023. Art.II sec.13(d), p.61; Art.XIII secs.1-2, pp.339-340; Art.XXXVII, p.426.",
+    "url": "https://imgix.cosmicjs.com/25da5eb0-15eb-11ee-b5b3-fbd321202bdf-Final-2023-NBA-Collective-Bargaining-Agreement-6-28-23.pdf"
+  },
+  {
+    "id": 2,
+    "title": "NBPA. PLYRS UNTD launch",
+    "description": "June 22, 2026. Collective player commercial brand.",
+    "url": "https://nbpa.com/news/plyrs-untd-nbpa-launches-new-commercial-brand-to-amplify-collective-player-influence"
+  },
+  {
+    "id": 3,
+    "title": "THINK450. Licensing",
+    "description": "NBPA group commercial and sponsorship licensing.",
+    "url": "https://www.think450.com/licensing"
+  },
+  {
+    "id": 4,
+    "title": "NBA. Terms of Use",
+    "description": "NBA/team intellectual property and commercial-use conditions.",
+    "url": "https://www.nba.com/termsofuse"
+  },
+  {
+    "id": 5,
+    "title": "NBPA. Fanatics Collectibles, NBA and NBPA partnership",
+    "description": "2025. Example of distinct league and player licensing participants.",
+    "url": "https://nbpa.com/news/fanatics-collectibles-nba-and-nbpa-launch-multiyear-partnership-to-elevate-the-collector-experience"
+  },
+  {
+    "id": 6,
+    "title": "Fantex. SEC-filed free writing prospectus",
+    "description": "January 27, 2015. Athlete brand-income participation precedent.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1573683/000110465915004681/a15-1065_4fwp.htm"
+  },
+  {
+    "id": 7,
+    "title": "Fantex. SEC-filed free writing prospectus",
+    "description": "May 21, 2014. Issuer tracking shares, dividends and risks.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1573683/000110465914040834/a14-6704_18fwp.htm"
+  },
+  {
+    "id": 8,
+    "title": "Vestible Assets. Annual report on Form 1-K",
+    "description": "Year ended December 31, 2025. Athlete income and team financing series; issuer disclosures.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1984345/000149315226025042/partii.htm"
+  },
+  {
+    "id": 9,
+    "title": "Finlete Funding. Form C attachment",
+    "description": "2025 filing. Athlete future-earnings participation and related promotional rights.",
+    "url": "https://www.sec.gov/Archives/edgar/data/2010670/000201067025000006/C1.pdf"
+  },
+  {
+    "id": 10,
+    "title": "Socios. Equity Token",
+    "description": "Current product page describes planned club-equity product, not available for investment at access.",
+    "url": "https://www.socios.com/socios-equity-token/"
+  },
+  {
+    "id": 11,
+    "title": "SEC. Exempt Offerings",
+    "description": "Updated January 26, 2026. Registration and exemption framework.",
+    "url": "https://www.sec.gov/resources-small-businesses/exempt-offerings"
+  },
+  {
+    "id": 12,
+    "title": "SEC. Regulation A",
+    "description": "Reviewed November 14, 2024. Tier 2 limits, audited financial statements and reporting.",
+    "url": "https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation"
+  },
+  {
+    "id": 13,
+    "title": "SEC. Regulation Crowdfunding",
+    "description": "Current overview. Registered intermediary, offering limit and general one-year resale restriction.",
+    "url": "https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation-crowdfunding"
+  },
+  {
+    "id": 14,
+    "title": "SEC. Alternative Trading System List",
+    "description": "Current overview. Broker-dealer registration and Form ATS do not constitute SEC approval.",
+    "url": "https://www.sec.gov/foia/frequently-requested-documents/alternative-trading-system-ats-list"
+  },
+  {
+    "id": 15,
+    "title": "SEC. Guide to Broker-Dealer Registration",
+    "description": "ATS naming restriction and operational classification.",
+    "url": "https://www.sec.gov/about/divisions-offices/division-trading-markets/division-trading-markets-compliance-guides/guide-broker-dealer-registration"
+  },
+  {
+    "id": 16,
+    "title": "SEC Investor.gov. Types of Orders",
+    "description": "Market and limit orders; execution and price distinctions.",
+    "url": "https://www.investor.gov/introduction-investing/investing-basics/how-stock-markets-work/types-orders"
+  },
+  {
+    "id": 17,
+    "title": "FINRA. Brokerage Accounts",
+    "description": "Initial and maintenance margin; house requirements.",
+    "url": "https://www.finra.org/investors/investing/investment-accounts/brokerage-accounts"
+  },
+  {
+    "id": 18,
+    "title": "FINRA. Rule 4210",
+    "description": "Long and short maintenance requirements differ.",
+    "url": "https://www.finra.org/rules-guidance/rulebooks/finra-rules/4210"
+  },
+  {
+    "id": 19,
+    "title": "SEC. Regulation SHO key points",
+    "description": "Locate and close-out concepts; historical settlement discussion is not used.",
+    "url": "https://www.sec.gov/investor/pubs/regsho.htm"
+  },
+  {
+    "id": 20,
+    "title": "SEC Investor.gov. T+1 settlement",
+    "description": "March 27, 2024. Covered U.S. securities transactions move to T+1 on May 28, 2024.",
+    "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/new-t1-settlement-cycle-what-investors-need-know-investor-bulletin"
+  },
+  {
+    "id": 21,
+    "title": "CME. Money Calculations for Futures and Options",
+    "description": "November 10, 2015. Cash settlement variation.",
+    "url": "https://www.cmegroup.com/education/articles-and-reports/money-calculations-for-futures-and-options"
+  },
+  {
+    "id": 22,
+    "title": "CME. Calculating Fair Value",
+    "description": "Financing, distributions and futures basis.",
+    "url": "https://www.cmegroup.com/trading/equity-index/fairvalue.html"
+  },
+  {
+    "id": 23,
+    "title": "OCC/OIC. American and European options",
+    "description": "March 2020. European exercise at expiry.",
+    "url": "https://prd-web.optionseducation.org/news/what-is-the-difference-between-american-style-and"
+  },
+  {
+    "id": 24,
+    "title": "OCC/OIC. Equity vs. Index Options",
+    "description": "Cash settlement conventions and multipliers.",
+    "url": "https://prd-web.optionseducation.org/advancedconcepts/equity-vs-index-options"
+  },
+  {
+    "id": 25,
+    "title": "NBA. 2026\u201327 salary cap",
+    "url": "https://pr.nba.com/2026-27-salary-cap/",
+    "description": "June30,2026 finalannouncement. $164.961m perteam."
+  },
+  {
+    "id": 26,
+    "title": "NBA. 2025\u201326 salary cap",
+    "url": "https://pr.nba.com/nba-salary-cap-2025-26-season/",
+    "description": "Finalannounced cap$154.647m."
+  },
+  {
+    "id": 27,
+    "title": "NBA. 2024\u201325 salary cap",
+    "url": "https://pr.nba.com/2024-25-nba-season-salary-cap/",
+    "description": "Finalannounced cap$140.588m."
+  },
+  {
+    "id": 28,
+    "title": "NBA. 2023\u201324 salary cap",
+    "url": "https://pr.nba.com/nba-salary-cap-for-2023-24-season-set-at-136-021-million/",
+    "description": "Finalannounced cap$136.021m."
+  }
+]

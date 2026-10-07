@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "as_of": "2026-10-07",
+  "summary": "42 checks passed: 13 commercial cash-flow invariants and 29 market-engine/integration tests. Browser checks covered buys, sales, shorts, quarterly cash, futures/options open and close, split adjustment, resting-order cancellation, valuation, platform break-even, risk tables and account reset.",
+  "details": "Separate salary appendix: 12 earlier checks. Model results use 20,000 assumed paired scenarios, seed20261007. Browser checks are a functional sample, not production security or regulatory certification. Research PDF:14 visually reviewed pages,24 primary-source links. No real investor funds or athlete agreements.",
+  "limitations": [
+    "No account persistence or restore",
+    "No external market counterparties",
+    "Cash-flow Monte Carlo and quote simulator are separate",
+    "No validated demand or offering permission"
+  ]
+}

@@ -1,0 +1,969 @@
+{
+  "project": "Court Capital",
+  "version": "1.0.0",
+  "as_of": "2026-10-07",
+  "seed": 20261007,
+  "draws": 20000,
+  "evidence_status": "Fictional archetypes and judgmental scenario model; no real athlete investments, trained AI model, observed returns or backtest.",
+  "assumptions": {
+    "horizon_years": 5,
+    "seasons": [
+      "2026-27",
+      "2027-28",
+      "2028-29",
+      "2029-30",
+      "2030-31"
+    ],
+    "base_cap": 164961000.0,
+    "cap_growth_triangular": {
+      "min": 0,
+      "mode": 0.06,
+      "max": 0.1
+    },
+    "cap_rule_continuation": "2030-31 extends beyond current CBA term; same bounds assumed. Opt-out after 2028-29 is not modeled.",
+    "nominal_usd": true,
+    "payment_timing": "Four equal quarterly installments for each annual modeled cash amount, at year offsets .25,.50,.75,1.00. Prototype convention, not actual NBA payroll.",
+    "participation": 0.01,
+    "units": 100000,
+    "net_collection_factor": 0.95,
+    "net_collection_definition": "Assumed 5% recurring collection friction haircut; not tax, escrow or a CBA rule.",
+    "collection_fee": 0.02,
+    "default_hazard_annual": 0.005,
+    "default_definition": "Independent annual absorbing failure of hypothetical collection vehicle. Subsequent payouts zero. Separate from athlete injury; not empirically estimated.",
+    "risk_free_rate": 0.04,
+    "risk_premium": 0.08,
+    "discount_rate": 0.12,
+    "discount_definition": "Assumed required return used to discount physical-scenario expected cashflows; not risk-neutral valuation or a Treasury quote.",
+    "terminal_principal": 0,
+    "terminal_value": 0,
+    "annual_raise": 0.05,
+    "raise_definition": "5% of first-year salary added annually; no compounding, both protected schedule and each new contract.",
+    "renewal_outcomes": [
+      "upside",
+      "base",
+      "downside",
+      "out_of_league"
+    ],
+    "renewal_method": "Softmax of log baseline probabilities + performance*[.65,.20,-.25,-.65] + injury*[-.8,-.3,.25,.85]. Single renewal at end of protected period; new contract covers remaining horizon.",
+    "injury_definition": "Any injury draw within two periods before renewal (one for one-year contract); affects renewal outcomes only. New signed pay protected for remaining model horizon.",
+    "performance_driver": "0.35*common normal demand + sqrt(1-0.35^2)*independent normal; hypothetical, not trained ML.",
+    "common_cap_driver": "Each year uses common normal-demand percentile with probability45%, otherwise independent uniform; triangular marginal distribution.",
+    "performance_cap_value": "User-defined illustrative basketball value as cap share, not observed wins or model-estimated revenue.",
+    "excluded": [
+      "Taxes",
+      "trading liquidity",
+      "bid-ask spread",
+      "athlete consent pricing",
+      "securities issuance costs",
+      "legal eligibility",
+      "endorsements",
+      "options",
+      "bonuses",
+      "buyouts",
+      "real contract details"
+    ],
+    "source_ids": [
+      "nba_cap_2026",
+      "cba2023"
+    ]
+  },
+  "assets": [
+    {
+      "ticker": "RISE",
+      "name": "Emerging prospect",
+      "salary": 8000000.0,
+      "guaranteed_years": 2,
+      "injury_hazard": 0.08,
+      "probabilities": [
+        0.25,
+        0.45,
+        0.2,
+        0.1
+      ],
+      "renewal_cap_shares": [
+        0.25,
+        0.16,
+        0.06,
+        0
+      ],
+      "performance_cap_share": 0.18,
+      "current_years_of_service": 2,
+      "renewal_service_max_cap_share": 0.25,
+      "fair_value_per_unit": 6.169648629229957,
+      "fair_claim_value": 616964.8629229957,
+      "current_cap_share": 0.048496311249325595,
+      "performance_cap_value": 29692980.0,
+      "conceptual_cap_surplus": 21692980.0,
+      "expected_annual_payout_per_unit": [
+        0.7407780800002745,
+        0.7741413960000494,
+        2.3231899879631177,
+        2.4265139069880783,
+        2.5302527000302697
+      ],
+      "expected_annual_payout_claim": [
+        74077.80800002745,
+        77414.13960000494,
+        232318.99879631176,
+        242651.39069880784,
+        253025.27000302696
+      ],
+      "mean_total_payout_per_unit": 8.794876070981479,
+      "pv_p05": 1.3450485900425222,
+      "pv_p50": 6.9821688291363655,
+      "pv_p95": 10.490987889463437,
+      "contracted_pv_share": 0.2163375107793034,
+      "future_contract_pv_share": 0.7836624892206966,
+      "simulated_renewal_outcomes": {
+        "upside": 0.24195,
+        "base": 0.4111,
+        "downside": 0.20235,
+        "out_of_league": 0.1446
+      },
+      "irr_of_mean_cashflows": 0.1200000000000373,
+      "zero_payout_probability": 0.0054,
+      "risk": {
+        "mean_pv_ratio": 1.0000000000000542,
+        "p05_pv_ratio": 0.2180105660588324,
+        "median_pv_ratio": 1.131696349133552,
+        "p95_pv_ratio": 1.7004190222049702,
+        "pv_shortfall_probability": 0.3625,
+        "funding_loss_var95": 0.7819894339411676,
+        "funding_loss_es95": 0.7925817434032054,
+        "definition": "Funding loss = 1 - discounted payout value / initial purchase cost; no terminal principal repayment."
+      },
+      "mean_estimate_mc_standard_error": 0.0218890487680244,
+      "cashflow_percentiles_by_year": {
+        "p05": [
+          0.7447999999999999,
+          0.78204,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "p50": [
+          0.7447999999999999,
+          0.78204,
+          2.697682176647004,
+          2.8308532681169294,
+          2.964531406678324
+        ],
+        "p95": [
+          0.7447999999999999,
+          0.78204,
+          4.375111269865697,
+          4.593088951710776,
+          4.810747708684498
+        ]
+      },
+      "guaranteed_gross_schedule": [
+        8000000.0,
+        8400000.0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "ticker": "PRIME",
+      "name": "Established star",
+      "salary": 35000000.0,
+      "guaranteed_years": 3,
+      "injury_hazard": 0.1,
+      "probabilities": [
+        0.2,
+        0.5,
+        0.22,
+        0.08
+      ],
+      "renewal_cap_shares": [
+        0.35,
+        0.28,
+        0.14,
+        0
+      ],
+      "performance_cap_share": 0.31,
+      "current_years_of_service": 7,
+      "renewal_service_max_cap_share": 0.35,
+      "fair_value_per_unit": 13.60436471897519,
+      "fair_claim_value": 1360436.4718975192,
+      "current_cap_share": 0.2121713617157995,
+      "performance_cap_value": 51137910.0,
+      "conceptual_cap_surplus": 16137910.0,
+      "expected_annual_payout_per_unit": [
+        3.240578250001704,
+        3.38584218000019,
+        3.529867879999261,
+        4.013112760906226,
+        4.187914664530034
+      ],
+      "expected_annual_payout_claim": [
+        324057.8250001704,
+        338584.218000019,
+        352986.7879999261,
+        401311.2760906226,
+        418791.4664530034
+      ],
+      "mean_total_payout_per_unit": 18.357315735436288,
+      "pv_p05": 8.547954245186707,
+      "pv_p50": 14.873790137406472,
+      "pv_p95": 16.863042165071953,
+      "contracted_pv_share": 0.6219440486675657,
+      "future_contract_pv_share": 0.3780559513324343,
+      "simulated_renewal_outcomes": {
+        "upside": 0.19235,
+        "base": 0.4566,
+        "downside": 0.2328,
+        "out_of_league": 0.11825
+      },
+      "irr_of_mean_cashflows": 0.12000000000004662,
+      "zero_payout_probability": 0.0055,
+      "risk": {
+        "mean_pv_ratio": 1.0000000000000187,
+        "p05_pv_ratio": 0.62832439601271,
+        "median_pv_ratio": 1.0933101577805173,
+        "p95_pv_ratio": 1.2395317615641104,
+        "pv_shortfall_probability": 0.36745,
+        "funding_loss_var95": 0.37167560398729005,
+        "funding_loss_es95": 0.41878042011976885,
+        "definition": "Funding loss = 1 - discounted payout value / initial purchase cost; no terminal principal repayment."
+      },
+      "mean_estimate_mc_standard_error": 0.020494835633693864,
+      "cashflow_percentiles_by_year": {
+        "p05": [
+          3.2584999999999997,
+          3.4214249999999997,
+          3.5843499999999997,
+          0.0,
+          0.0
+        ],
+        "p50": [
+          3.2584999999999997,
+          3.4214249999999997,
+          3.5843499999999997,
+          4.925878249183334,
+          5.167291745806532
+        ],
+        "p95": [
+          3.2584999999999997,
+          3.4214249999999997,
+          3.5843499999999997,
+          6.470213172254808,
+          6.792222546734691
+        ]
+      },
+      "guaranteed_gross_schedule": [
+        35000000.0,
+        36750000.0,
+        38500000.0,
+        0,
+        0
+      ]
+    },
+    {
+      "ticker": "ANCHOR",
+      "name": "Long-contract veteran star",
+      "salary": 55000000.0,
+      "guaranteed_years": 4,
+      "injury_hazard": 0.11,
+      "probabilities": [
+        0.1,
+        0.45,
+        0.3,
+        0.15
+      ],
+      "renewal_cap_shares": [
+        0.35,
+        0.3,
+        0.16,
+        0
+      ],
+      "performance_cap_share": 0.34,
+      "current_years_of_service": 10,
+      "renewal_service_max_cap_share": 0.35,
+      "fair_value_per_unit": 19.358338678328554,
+      "fair_claim_value": 1935833.8678328553,
+      "current_cap_share": 0.3334121398391135,
+      "performance_cap_value": 56086740.00000001,
+      "conceptual_cap_surplus": 1086740.0000000075,
+      "expected_annual_payout_per_unit": [
+        5.096177625000954,
+        5.321684444999692,
+        5.548343377498313,
+        5.769036927501303,
+        3.7634343560630454
+      ],
+      "expected_annual_payout_claim": [
+        509617.7625000954,
+        532168.4444999691,
+        554834.3377498313,
+        576903.6927501303,
+        376343.43560630456
+      ],
+      "mean_total_payout_per_unit": 25.49867673106307,
+      "pv_p05": 17.339223588499102,
+      "pv_p50": 19.287943912653397,
+      "pv_p95": 21.28360657937086,
+      "contracted_pv_share": 0.8848402362392476,
+      "future_contract_pv_share": 0.11515976376075243,
+      "simulated_renewal_outcomes": {
+        "upside": 0.10335,
+        "base": 0.4004,
+        "downside": 0.2974,
+        "out_of_league": 0.19885
+      },
+      "irr_of_mean_cashflows": 0.11999999999997002,
+      "zero_payout_probability": 0.00475,
+      "risk": {
+        "mean_pv_ratio": 0.9999999999999254,
+        "p05_pv_ratio": 0.895697914816945,
+        "median_pv_ratio": 0.9963635946841882,
+        "p95_pv_ratio": 1.0994541904155042,
+        "pv_shortfall_probability": 0.5081,
+        "funding_loss_var95": 0.10430208518305495,
+        "funding_loss_es95": 0.1538352903732795,
+        "definition": "Funding loss = 1 - discounted payout value / initial purchase cost; no terminal principal repayment."
+      },
+      "mean_estimate_mc_standard_error": 0.01664204465180653,
+      "cashflow_percentiles_by_year": {
+        "p05": [
+          5.1205,
+          5.376525,
+          5.63255,
+          5.888574999999999,
+          0.0
+        ],
+        "p50": [
+          5.1205,
+          5.376525,
+          5.63255,
+          5.888574999999999,
+          3.289766023453674
+        ],
+        "p95": [
+          5.1205,
+          5.376525,
+          5.63255,
+          5.888574999999999,
+          6.658778576905272
+        ]
+      },
+      "guaranteed_gross_schedule": [
+        55000000.0,
+        57750000.0,
+        60500000.00000001,
+        63249999.99999999,
+        0
+      ]
+    },
+    {
+      "ticker": "ROLE",
+      "name": "Rotation contributor",
+      "salary": 18000000.0,
+      "guaranteed_years": 2,
+      "injury_hazard": 0.08,
+      "probabilities": [
+        0.15,
+        0.5,
+        0.25,
+        0.1
+      ],
+      "renewal_cap_shares": [
+        0.18,
+        0.12,
+        0.05,
+        0
+      ],
+      "performance_cap_share": 0.14,
+      "current_years_of_service": 4,
+      "renewal_service_max_cap_share": 0.25,
+      "fair_value_per_unit": 6.306820947323937,
+      "fair_claim_value": 630682.0947323936,
+      "current_cap_share": 0.1091167003109826,
+      "performance_cap_value": 23094540.000000004,
+      "conceptual_cap_surplus": 5094540.000000004,
+      "expected_annual_payout_per_unit": [
+        1.6687616400005987,
+        1.7420820795006622,
+        1.5867288348351982,
+        1.6570702365853363,
+        1.7273292439399694
+      ],
+      "expected_annual_payout_claim": [
+        166876.16400005986,
+        174208.20795006622,
+        158672.88348351984,
+        165707.02365853364,
+        172732.92439399695
+      ],
+      "mean_total_payout_per_unit": 8.381972034860498,
+      "pv_p05": 3.0263593275956744,
+      "pv_p50": 7.200584809043087,
+      "pv_p95": 9.545685347060015,
+      "contracted_pv_share": 0.47650449107003773,
+      "future_contract_pv_share": 0.5234955089299622,
+      "simulated_renewal_outcomes": {
+        "upside": 0.15205,
+        "base": 0.45065,
+        "downside": 0.2575,
+        "out_of_league": 0.1398
+      },
+      "irr_of_mean_cashflows": 0.12000000000011835,
+      "zero_payout_probability": 0.0042,
+      "risk": {
+        "mean_pv_ratio": 1.0000000000000757,
+        "p05_pv_ratio": 0.47985496225000596,
+        "median_pv_ratio": 1.1417138474651614,
+        "p95_pv_ratio": 1.5135494454001217,
+        "pv_shortfall_probability": 0.41025,
+        "funding_loss_var95": 0.5201450377499941,
+        "funding_loss_es95": 0.5421514166003599,
+        "definition": "Funding loss = 1 - discounted payout value / initial purchase cost; no terminal principal repayment."
+      },
+      "mean_estimate_mc_standard_error": 0.014741405759086664,
+      "cashflow_percentiles_by_year": {
+        "p05": [
+          1.6758,
+          1.7595899999999998,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "p50": [
+          1.6758,
+          1.7595899999999998,
+          1.9982376326035698,
+          2.0968728981505365,
+          2.1948597886077525
+        ],
+        "p95": [
+          1.6758,
+          1.7595899999999998,
+          3.118037583680177,
+          3.273501016206804,
+          3.429153822646852
+        ]
+      },
+      "guaranteed_gross_schedule": [
+        18000000.0,
+        18900000.0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "ticker": "VET",
+      "name": "Late-career starter",
+      "salary": 38000000.0,
+      "guaranteed_years": 2,
+      "injury_hazard": 0.16,
+      "probabilities": [
+        0.05,
+        0.3,
+        0.35,
+        0.3
+      ],
+      "renewal_cap_shares": [
+        0.3,
+        0.18,
+        0.07,
+        0
+      ],
+      "performance_cap_share": 0.17,
+      "current_years_of_service": 12,
+      "renewal_service_max_cap_share": 0.35,
+      "fair_value_per_unit": 9.337094051986455,
+      "fair_claim_value": 933709.4051986454,
+      "current_cap_share": 0.2303574784342966,
+      "performance_cap_value": 28043370.000000004,
+      "conceptual_cap_surplus": -9956629.999999996,
+      "expected_annual_payout_per_unit": [
+        3.5213492299991733,
+        3.679214710499812,
+        1.437926698800206,
+        1.5030129390233076,
+        1.5655246183482243
+      ],
+      "expected_annual_payout_claim": [
+        352134.92299991735,
+        367921.4710499812,
+        143792.6698800206,
+        150301.29390233077,
+        156552.46183482243
+      ],
+      "mean_total_payout_per_unit": 11.707028196671732,
+      "pv_p05": 6.38898080270198,
+      "pv_p50": 8.863007616170869,
+      "pv_p95": 16.407235531407355,
+      "contracted_pv_share": 0.6794537935743145,
+      "future_contract_pv_share": 0.32054620642568554,
+      "simulated_renewal_outcomes": {
+        "upside": 0.0518,
+        "base": 0.264,
+        "downside": 0.32025,
+        "out_of_league": 0.36395
+      },
+      "irr_of_mean_cashflows": 0.11999999999995403,
+      "zero_payout_probability": 0.00465,
+      "risk": {
+        "mean_pv_ratio": 1.0000000000000213,
+        "p05_pv_ratio": 0.684257946544164,
+        "median_pv_ratio": 0.9492254835202474,
+        "p95_pv_ratio": 1.7572100527269228,
+        "pv_shortfall_probability": 0.69,
+        "funding_loss_var95": 0.31574205345583595,
+        "funding_loss_es95": 0.32861146939435604,
+        "definition": "Funding loss = 1 - discounted payout value / initial purchase cost; no terminal principal repayment."
+      },
+      "mean_estimate_mc_standard_error": 0.02238560030725228,
+      "cashflow_percentiles_by_year": {
+        "p05": [
+          3.5378,
+          3.7146899999999996,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "p50": [
+          3.5378,
+          3.7146899999999996,
+          1.1836065117397718,
+          1.2423087172138336,
+          1.3004553201876914
+        ],
+        "p95": [
+          3.5378,
+          3.7146899999999996,
+          4.83274708936568,
+          5.046524837095808,
+          5.269584063846624
+        ]
+      },
+      "guaranteed_gross_schedule": [
+        38000000.0,
+        39900000.0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "ticker": "REBOUND",
+      "name": "Recovery and renewal candidate",
+      "salary": 12000000.0,
+      "guaranteed_years": 1,
+      "injury_hazard": 0.22,
+      "probabilities": [
+        0.18,
+        0.3,
+        0.27,
+        0.25
+      ],
+      "renewal_cap_shares": [
+        0.22,
+        0.12,
+        0.045,
+        0
+      ],
+      "performance_cap_share": 0.11,
+      "current_years_of_service": 5,
+      "renewal_service_max_cap_share": 0.25,
+      "fair_value_per_unit": 4.978834574859298,
+      "fair_claim_value": 497883.4574859298,
+      "current_cap_share": 0.0727444668739884,
+      "performance_cap_value": 18145710.0,
+      "conceptual_cap_surplus": 6145710.0,
+      "expected_annual_payout_per_unit": [
+        1.1119491600003248,
+        1.311702490232008,
+        1.371388457098039,
+        1.4318653233254601,
+        1.4886260355518015
+      ],
+      "expected_annual_payout_claim": [
+        111194.91600003248,
+        131170.2490232008,
+        137138.8457098039,
+        143186.53233254602,
+        148862.60355518016
+      ],
+      "mean_total_payout_per_unit": 6.715531466207304,
+      "pv_p05": 1.0413279406780818,
+      "pv_p50": 3.26809895286162,
+      "pv_p95": 11.944905852629779,
+      "contracted_pv_share": 0.20816793242948514,
+      "future_contract_pv_share": 0.7918320675705148,
+      "simulated_renewal_outcomes": {
+        "upside": 0.1794,
+        "base": 0.25665,
+        "downside": 0.25755,
+        "out_of_league": 0.3064
+      },
+      "irr_of_mean_cashflows": 0.12000000000002065,
+      "zero_payout_probability": 0.0047,
+      "risk": {
+        "mean_pv_ratio": 0.9999999999999851,
+        "p05_pv_ratio": 0.20915094185620933,
+        "median_pv_ratio": 0.6563983807302889,
+        "p95_pv_ratio": 2.399136921107153,
+        "pv_shortfall_probability": 0.5715,
+        "funding_loss_var95": 0.7908490581437907,
+        "funding_loss_es95": 0.7939856549106195,
+        "definition": "Funding loss = 1 - discounted payout value / initial purchase cost; no terminal principal repayment."
+      },
+      "mean_estimate_mc_standard_error": 0.027276225703167054,
+      "cashflow_percentiles_by_year": {
+        "p05": [
+          1.1172,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "p50": [
+          1.1172,
+          0.7368031042159415,
+          0.7733018599575716,
+          0.8097217621892394,
+          0.8459874991965494
+        ],
+        "p95": [
+          1.1172,
+          3.6071523489547066,
+          3.7870039207101405,
+          3.9671951063393305,
+          4.147320685507129
+        ]
+      },
+      "guaranteed_gross_schedule": [
+        12000000.0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "portfolio": {
+    "mean_pv_ratio": 1.0000000000000135,
+    "p05_pv_ratio": 0.7124179847944541,
+    "median_pv_ratio": 0.9889108852497375,
+    "p95_pv_ratio": 1.3238619926888973,
+    "pv_shortfall_probability": 0.52395,
+    "funding_loss_var95": 0.28758201520554594,
+    "funding_loss_es95": 0.34153838311500795,
+    "definition": "Funding loss = 1 - discounted payout value / initial purchase cost; no terminal principal repayment.",
+    "name": "Equal dollars across six fictional claims",
+    "weights": [
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666
+    ],
+    "budget": 10000,
+    "units_by_asset": [
+      270.1396411410687,
+      122.50970192985356,
+      86.09554230665887,
+      264.2641483858606,
+      178.4995050266293,
+      334.75036007071327
+    ],
+    "expected_annual_payout": [
+      2477.6523264255284,
+      2638.2988262173103,
+      2672.7739315386843,
+      2829.3399601743754,
+      2754.831317987976
+    ],
+    "asset_pv_correlation": [
+      [
+        1.0,
+        0.022547615853342633,
+        0.005276554786655365,
+        0.028929742365850133,
+        0.01798892096166074,
+        0.02411976647560458
+      ],
+      [
+        0.022547615853342633,
+        1.0,
+        0.00970750621148284,
+        0.021585644204180115,
+        0.018805170150763252,
+        0.01895278001040301
+      ],
+      [
+        0.005276554786655365,
+        0.009707506211482838,
+        1.0,
+        0.011841278130452833,
+        0.02007222093992813,
+        0.027173001166813548
+      ],
+      [
+        0.028929742365850136,
+        0.02158564420418012,
+        0.011841278130452835,
+        1.0,
+        0.023191791146982176,
+        0.019533301446152694
+      ],
+      [
+        0.01798892096166074,
+        0.01880517015076325,
+        0.02007222093992813,
+        0.023191791146982176,
+        1.0,
+        0.03470427497151455
+      ],
+      [
+        0.024119766475604584,
+        0.018952780010403014,
+        0.027173001166813548,
+        0.019533301446152698,
+        0.03470427497151455,
+        1.0
+      ]
+    ]
+  },
+  "sensitivities": {
+    "risk_free_0.02": {
+      "risk_free": 0.02,
+      "premium": 0.08,
+      "discount_rate": 0.1,
+      "prices": {
+        "RISE": 6.518182887108359,
+        "PRIME": 14.242547426356305,
+        "ANCHOR": 20.192528386645616,
+        "ROLE": 6.5867803927758946,
+        "VET": 9.663474908603733,
+        "REBOUND": 5.212352489059032
+      }
+    },
+    "risk_free_0.04": {
+      "risk_free": 0.04,
+      "premium": 0.08,
+      "discount_rate": 0.12,
+      "prices": {
+        "RISE": 6.169648629229957,
+        "PRIME": 13.60436471897519,
+        "ANCHOR": 19.358338678328554,
+        "ROLE": 6.306820947323937,
+        "VET": 9.337094051986455,
+        "REBOUND": 4.978834574859298
+      }
+    },
+    "risk_free_0.06": {
+      "risk_free": 0.06,
+      "premium": 0.08,
+      "discount_rate": 0.14,
+      "prices": {
+        "RISE": 5.848552719201563,
+        "PRIME": 13.013921279393633,
+        "ANCHOR": 18.583407445102914,
+        "ROLE": 6.047355360279678,
+        "VET": 9.032333713639746,
+        "REBOUND": 4.762679828367338
+      }
+    },
+    "renewal_probability_x0.75": {
+      "multiplier": 0.75,
+      "prices": {
+        "RISE": 4.960242567490931,
+        "PRIME": 12.311025294016714,
+        "ANCHOR": 18.799272998197925,
+        "ROLE": 5.489147272558842,
+        "VET": 8.59601628296273,
+        "REBOUND": 3.9970319009840214
+      }
+    },
+    "renewal_probability_x1.00": {
+      "multiplier": 1,
+      "prices": {
+        "RISE": 6.169648629229957,
+        "PRIME": 13.60436471897519,
+        "ANCHOR": 19.358338678328554,
+        "ROLE": 6.306820947323937,
+        "VET": 9.337094051986455,
+        "REBOUND": 4.978834574859298
+      }
+    },
+    "renewal_probability_x1.10": {
+      "multiplier": 1.1,
+      "prices": {
+        "RISE": 6.549969248221488,
+        "PRIME": 13.977706974884615,
+        "ANCHOR": 19.56435766733297,
+        "ROLE": 6.576503514581028,
+        "VET": 9.624573653274627,
+        "REBOUND": 5.357493104055352
+      }
+    },
+    "protected_years_shift_-1": {
+      "shift": -1,
+      "prices": {
+        "RISE": 7.482447041058631,
+        "PRIME": 13.793122617178648,
+        "ANCHOR": 17.904160999011346,
+        "ROLE": 6.191027886934823,
+        "VET": 7.637710249969634,
+        "REBOUND": 5.080652549475078
+      },
+      "interpretation": "Contract-design counterfactual; replacing renewal exposure with scheduled protected pay also changes renewal timing. Not pure protection effect."
+    },
+    "protected_years_shift_0": {
+      "shift": 0,
+      "prices": {
+        "RISE": 6.169648629229957,
+        "PRIME": 13.60436471897519,
+        "ANCHOR": 19.358338678328554,
+        "ROLE": 6.306820947323937,
+        "VET": 9.337094051986455,
+        "REBOUND": 4.978834574859298
+      },
+      "interpretation": "Contract-design counterfactual; replacing renewal exposure with scheduled protected pay also changes renewal timing. Not pure protection effect."
+    },
+    "protected_years_shift_1": {
+      "shift": 1,
+      "prices": {
+        "RISE": 5.059350374339171,
+        "PRIME": 13.389099416542821,
+        "ANCHOR": 20.678938810371385,
+        "ROLE": 6.49043952112328,
+        "VET": 11.123955942291051,
+        "REBOUND": 4.656409383416896
+      },
+      "interpretation": "Contract-design counterfactual; replacing renewal exposure with scheduled protected pay also changes renewal timing. Not pure protection effect."
+    }
+  },
+  "stress_tests": {
+    "injury_before_renewal": {
+      "prices": {
+        "RISE": 4.990956662425467,
+        "PRIME": 12.69002251115941,
+        "ANCHOR": 18.880636986280233,
+        "ROLE": 5.583404590861456,
+        "VET": 8.438100286902513,
+        "REBOUND": 3.613894265905081
+      },
+      "change_from_base_pct": {
+        "RISE": -0.1910468549570551,
+        "PRIME": -0.0672094748048373,
+        "ANCHOR": -0.02467679174262527,
+        "ROLE": -0.11470380442137584,
+        "VET": -0.09628196525370569,
+        "REBOUND": -0.27414855593847287
+      },
+      "equal_dollar_portfolio_pv_change": -0.1280112411863451
+    },
+    "zero_cap_growth": {
+      "prices": {
+        "RISE": 5.68799048938695,
+        "PRIME": 12.85717295768903,
+        "ANCHOR": 18.936150557176497,
+        "ROLE": 5.97833349917926,
+        "VET": 9.036440301618857,
+        "REBOUND": 4.775862554181194
+      },
+      "change_from_base_pct": {
+        "RISE": -0.07806897422991876,
+        "PRIME": -0.054922943975765914,
+        "ANCHOR": -0.021809109147609473,
+        "ROLE": -0.052084473443638535,
+        "VET": -0.03219992737500954,
+        "REBOUND": -0.040766974203765294
+      },
+      "equal_dollar_portfolio_pv_change": -0.046642067062617865
+    },
+    "all_upside_renewals": {
+      "prices": {
+        "RISE": 10.061780341332232,
+        "PRIME": 16.347780346126125,
+        "ANCHOR": 20.95098069143061,
+        "ROLE": 9.292660229446671,
+        "VET": 16.822892629767786,
+        "REBOUND": 11.616941049951889
+      },
+      "change_from_base_pct": {
+        "RISE": 0.6308514383886492,
+        "PRIME": 0.2016570184511779,
+        "ANCHOR": 0.08227162669103416,
+        "ROLE": 0.4734301650643282,
+        "VET": 0.8017268045178079,
+        "REBOUND": 1.3332651196349867
+      },
+      "equal_dollar_portfolio_pv_change": 0.587200362124664
+    },
+    "discount_rate_plus_200bp": {
+      "prices": {
+        "RISE": 5.848552719201563,
+        "PRIME": 13.013921279393633,
+        "ANCHOR": 18.583407445102914,
+        "ROLE": 6.047355360279678,
+        "VET": 9.032333713639746,
+        "REBOUND": 4.762679828367338
+      },
+      "change_from_base_pct": {
+        "RISE": -0.052044440344161114,
+        "PRIME": -0.0434010298737445,
+        "ANCHOR": -0.04003087486495771,
+        "ROLE": -0.04114047143741306,
+        "VET": -0.03263974172798134,
+        "REBOUND": -0.043414727531506436
+      },
+      "equal_dollar_portfolio_pv_change": -0.0421118809632941
+    }
+  },
+  "common_factor_stress": {
+    "definition": "Bottom decile of shared demand factor, conditional subset of base draws; not a separate forecast.",
+    "draw_count": 2000,
+    "equal_dollar_pv_change": -0.09232477595758037,
+    "asset_pv_change": {
+      "RISE": -0.11902734244713331,
+      "PRIME": -0.05404670089383301,
+      "ANCHOR": -0.02272919637382187,
+      "ROLE": -0.08278358391101182,
+      "VET": -0.07816012329363764,
+      "REBOUND": -0.19720170882601407
+    }
+  },
+  "cap_paths": {
+    "mean": [
+      164961000.0,
+      173730520.54261503,
+      182964825.32450792,
+      192689607.961953,
+      203015942.971928
+    ],
+    "p05": [
+      164961000.0,
+      167767302.9528055,
+      173545371.0904284,
+      179677467.84684184,
+      186203062.86010492
+    ],
+    "p95": [
+      164961000.0,
+      179134838.77252164,
+      191793403.01431587,
+      205129756.72671893,
+      219449376.05013686
+    ]
+  },
+  "formulas": {
+    "eligible_distribution": "gross_salary * survival * .95 * (1-.02) * .01 / 100000",
+    "fair_value": "mean(sum_t sum_q (annual_distribution[t]/4)/(1+.12)^(t+q/4)), t=0..4, q=1..4",
+    "funding_loss": "1 - scenario_PV / purchase_price",
+    "equal_dollar_portfolio": "mean(asset_scenario_PV / own_mean_PV)"
+  },
+  "warnings": [
+    "Scenario percentiles are uncertainty ranges under assumptions, not confidence intervals or observed investment returns.",
+    "IRR of expected cashflows equals assumed discount rate by construction; it is not independent performance evidence.",
+    "Diversification comparisons use own-DCF prices and identical paired scenarios; fees and illiquidity beyond collection fee are omitted.",
+    "Share of NBA salary cap is not legal ownership, distributable revenue, league payroll or market size."
+  ]
+}
